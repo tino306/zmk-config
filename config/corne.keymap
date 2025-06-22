@@ -34,20 +34,27 @@
 
                 lower_layer {
                         bindings = <
-   &kp BLSH &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7  &kp N8 &kp N9 &kp N0  &kp PLUS
-   &kp TILDE &kp EXCL &kp DQT &kp HASH &kp DLLR &kp PERCENT   &kp AMPS &kp FSLH  &kp LPAR &kp RPAR &kp EQUAL  &kp LS(MINUS)
-   &kp LT &kp GT &kp AT &kp PIPE &kp LS(N4) &trans   &trans &trans  &trans &trans &trans  &trans
+   &kp RA(MINUS)  &kp N1         &kp N2     &kp N3         &kp N4         &kp N5
+   &kp N6         &kp N7         &kp N8     &kp N9         &kp N0         &kp MINUS
+   &kp RA(RBKT)   &kp RS(N1)     &kp RS(N2) &kp RS(N3)     &kp RA(N4)     &kp RS(N5)
+   &kp RS(N6)     &kp RS(N7)     &kp RS(N8) &kp RS(N9)     &kp RS(N0)     &kp RS(MINUS)
+   &kp NUBS       &kp RS(NUBS)   &kp RA(N2) &kp RA(NUBS)   &kp RA(N5)     &kp BSLH
+   &kp RS(RBKT)   &kp RA(N8)     &kp RA(N8) &kp RA(N9)     &kp RA(N0)     &kp RS(BSLH)
 
-   &kp LCTRL & kp LGUI &trans  &trans &kp RGUI & kp RALT
+   &kp LCTRL &kp LGUI &trans  &trans &kp RGUI &kp RALT
                         >;
                 };
 
                 raise_layer {
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+   &kp F1    &kp F2       &kp F3       &kp F4       &kp F5         &kp F6
+   &kp F7    &kp F8       &kp F9       &kp F10      &kp F11        &kp INS
+   &trans    &trans       &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP   &trans
+   &kp LEFT  &kp DOWN     &kp UP       &kp RIGHT    &kp EQUAL      &kp RS(EQUAL)
+   &trans    &trans       &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0   &trans
+   &kp PSCRN &kp C_BRI_DN &kp C_BRI_UP &trans       &trans         &trans
+
+   &kp LCTRL &kp LGUI &trans  &trans &kp RGUI &kp RALT
                         >;
                 };
         };
