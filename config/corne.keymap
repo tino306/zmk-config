@@ -39,7 +39,7 @@
    &kp RA(RBKT)   &kp RS(N1)     &kp RS(N2) &kp RS(N3)     &kp RA(N4)     &kp RS(N5)
    &kp RS(N6)     &kp RS(N7)     &kp RS(N8) &kp RS(N9)     &kp RS(N0)     &kp RS(MINUS)
    &kp NUBS       &kp RS(NUBS)   &kp RA(N2) &kp RA(NUBS)   &kp RA(N5)     &kp BSLH
-   &kp RS(RBKT)   &kp RA(N8)     &kp RA(N8) &kp RA(N9)     &kp RA(N0)     &kp RS(BSLH)
+   &kp RS(RBKT)   &kp RA(N7)     &kp RA(N8) &kp RA(N9)     &kp RA(N0)     &kp RS(BSLH)
 
    &kp LCTRL &kp LGUI &trans  &trans &kp RGUI &kp RALT
                         >;
