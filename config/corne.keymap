@@ -41,7 +41,7 @@
    &kp GRAVE      &kp RS(GRAVE)  &kp RA(N2) &kp RS(RA(N7)) &kp RS(N4)     &kp BSLH
    &kp RS(RBKT)   &kp RS(RA(N8)) &kp RA(N8) &kp RA(N9)     &kp RS(RA(N9)) &kp RS(BSLH)
 
-   &kp LCTRL &kp LGUI &trans  &trans &kp RGUI &kp RALT
+   &trans &trans &trans  &trans &trans &trans
                         >;
                 };
 
@@ -54,7 +54,7 @@
    &trans    &bt BT_CLR   &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0   &trans
    &kp PSCRN &kp C_BRI_DN &kp C_BRI_UP &trans       &trans         &trans
 
-   &kp LCTRL &kp LGUI &trans  &trans &kp RGUI &kp RALT
+   &trans &trans &trans  &trans &trans &trans
                         >;
                 };
         };
