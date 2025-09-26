@@ -23,12 +23,12 @@
         combos {
                 compatible = "zmk,combos";
                 combo_to_win {
-                        timeout-ms = <100>;
+                        timeout-ms = <50>;
                         key-positions = <0 1>;
                         bindings = <&to 3>;
                 };
                 combo_to_mac {
-                        timeout-ms = <100>;
+                        timeout-ms = <50>;
                         key-positions = <2 3>;
                         bindings = <&to 0>;
                 };
