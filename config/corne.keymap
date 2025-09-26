@@ -19,10 +19,28 @@
  */
 
 / {
+        // define combos for switching between mac and win layers
+        combos {
+                compatible = "zmk,combos";
+                combo_to_win {
+                        timeout-ms = <50>;
+                        keypositions = <0 6 12>;
+                        bindings = <&to 3>;
+                        layers = <0>;
+                };
+                combo_to_mac {
+                        timeout-ms = <50>;
+                        keypositions = <0 6 12>;
+                        bindings = <&to 0>;
+                        layers = <3>;
+                };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
+                // 0 1 2 layers for mac os keybindings
+                mac_default { // layer 0
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
@@ -32,7 +50,7 @@
                         >;
                 };
 
-                lower_layer {
+                mac_lower { // layer 1
                         bindings = <
    &kp RS(RA(N7)) &kp N1         &kp N2     &kp N3         &kp N4         &kp N5
    &kp N6         &kp N7         &kp N8     &kp N9         &kp N0         &kp MINUS
@@ -45,7 +63,44 @@
                         >;
                 };
 
-                raise_layer {
+                mac_raise { // layer 2
+                        bindings = <
+   &kp F1    &kp F2       &kp F3       &kp F4       &kp F5         &kp F6
+   &kp F7    &kp F8       &kp F9       &kp F10      &kp F11        &kp INS
+   &trans    &trans       &kp C_MUTE   &kp C_VOL_DN &kp C_VOL_UP   &trans
+   &kp LEFT  &kp DOWN     &kp UP       &kp RIGHT    &kp EQUAL      &kp RS(EQUAL)
+   &trans    &bt BT_CLR   &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0   &trans
+   &kp PSCRN &kp C_BRI_DN &kp C_BRI_UP &trans       &trans         &trans
+
+   &trans &trans &trans  &trans &trans &trans
+                        >;
+                };
+
+                // 3 4 5 layers for mac os keybindings
+                win_default { // layer 3
+                        bindings = <
+   &kp ESC   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp TAB   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+
+            &kp LGUI &kp LCTRL &lt 4 SPACE   &lt 5 RET &kp RCTRL &kp LALT
+                        >;
+                };
+
+                win_lower { // layer 4
+                        bindings = <
+   &kp RA(MINUS)  &kp N1         &kp N2     &kp N3         &kp N4         &kp N5
+   &kp N6         &kp N7         &kp N8     &kp N9         &kp N0         &kp MINUS
+   &kp RA(RBKT)   &kp RS(N1)     &kp RS(N2) &kp RS(N3)     &kp RA(N4)     &kp RS(N5)
+   &kp RS(N6)     &kp RS(N7)     &kp RS(N8) &kp RS(N9)     &kp RS(N0)     &kp RS(MINUS)
+   &kp NUBS       &kp RS(NUBS)   &kp RA(N2) &kp RA(NUBS)   &kp RA(N5)     &kp BSLH
+   &kp RS(RBKT)   &kp RA(N7)     &kp RA(N8) &kp RA(N9)     &kp RA(N0)     &kp RS(BSLH)
+
+   &trans &trans &trans  &trans &trans &trans
+                        >;
+                };
+
+                win_raise { // layer 5
                         bindings = <
    &kp F1    &kp F2       &kp F3       &kp F4       &kp F5         &kp F6
    &kp F7    &kp F8       &kp F9       &kp F10      &kp F11        &kp INS
