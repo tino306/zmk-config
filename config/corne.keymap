@@ -25,15 +25,15 @@
                 combo_to_win {
                         timeout-ms = <50>;
                         key-positions = <0 6 12>;
-                        timeout-ms = <100>
+                        timeout-ms = <100>;
                         bindings = <&to 3>;
                         layers = <0>;
                 };
                 combo_to_mac {
                         timeout-ms = <50>;
                         key-positions = <0 6 12>;
+                        timeout-ms = <100>;
                         bindings = <&to 0>;
-                        timeout-ms = <100>
                         layers = <3>;
                 };
         };
